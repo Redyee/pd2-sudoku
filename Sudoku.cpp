@@ -47,9 +47,9 @@ void Sudoku::changeNum(int a ,int b){
 	int x ,y ,i;
 	for (i=0 ; i<MapSize ; i++  ){ 
 		if( map[i] == a) map[i] = x;
-		else if(map[i]==b) map[i] = y;
+		else if(map[i]==b) map[i] = y;}
 		x = b;
-		y = a;}
+		y = a;
 }
 
 void Sudoku:: changeRow(int a,int b){
@@ -65,7 +65,7 @@ void Sudoku:: changeRow(int a,int b){
 void Sudoku::changeCol(int a,int b){
 	int t ; //, A =a/3 , B = b/3;
 	
-	for( t=0; t<26 ; t++ ){
+	for( t=0; t<27 ; t++ ){
 		buff[ t ] = map[ 9*(t/3)+(t%3)+ a*3 ];
 		map[9*(t/3)+ (t%3)+ a*3 ] = map[9*(t/3) + (t%3) +b*3];
 		map[9*(t/3)+(t%3)+ b*3] = buff[t];	
@@ -121,4 +121,4 @@ void Sudoku::testFun(){ 	// for main to print
 		cout << map[i] <<" ";
 		if( i%9==8) cout << endl;
 	}
-} */
+}  */
