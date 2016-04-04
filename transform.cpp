@@ -1,7 +1,7 @@
 
 #include<iostream>
 #include"Sudoku.h"
-Sudoku::transform(){
+void Sudoku::transform(){
 	        int i;
 
 
