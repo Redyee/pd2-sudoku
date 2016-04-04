@@ -105,7 +105,7 @@ void Sudoku::flip(int a){
 			map[ 9*(8-i)+j ] =k;}
 	}
 }
-
+/*
 void Sudoku::testFun(){ 	// for main to print
 //	for( int i=0;i<MapSize ; i++ ){
 //		cout << Bns[i] <<" ";
@@ -121,4 +121,4 @@ void Sudoku::testFun(){ 	// for main to print
 		cout << map[i] <<" ";
 		if( i%9==8) cout << endl;
 	}
-} 
+} */
