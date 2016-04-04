@@ -76,14 +76,12 @@ void Sudoku::changeCol(int a,int b){
 void Sudoku::rotate(int n){
 	int u , t,  i  ,j , N ,v;
 	N =n%4;
-	if ( N==3 ) N=1;
-	else if( N==1 )N=3;
 	for(v=1 ; v<=N ;v++){
-		for(u=0; u<=MapSize ;u++)
+		for(u=0; u<MapSize ;u++)
 			{buff[u] = map[u];}
-		for(t=0; t<=MapSize	;t++){
+		for(t=0; t<MapSize	;t++){
 			i = t/9;  j = t%9;
-			map[ t ] = buff[ 9*j +8-i ];
+			map[ 9*j+8-i ] = buff[ t ];
 		}
 	}
 }
@@ -107,12 +105,12 @@ void Sudoku::flip(int a){
 			map[ 9*(8-i)+j ] =k;}
 	}
 }
-/*
+
 void Sudoku::testFun(){ 	// for main to print
-	for( int i=0;i<MapSize ; i++ ){
-		cout << Bns[i] <<" ";
-		if( i%9==8) cout <<endl;	
-	}
+//	for( int i=0;i<MapSize ; i++ ){
+//		cout << Bns[i] <<" ";
+//		if( i%9==8) cout <<endl;	
+//	}
 	cout <<endl;
 	for( int i=0;i<MapSize; i++ ){
 		cout << Ans[i] <<" ";
@@ -123,4 +121,4 @@ void Sudoku::testFun(){ 	// for main to print
 		cout << map[i] <<" ";
 		if( i%9==8) cout << endl;
 	}
-} */
+} 
