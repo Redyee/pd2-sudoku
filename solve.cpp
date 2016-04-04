@@ -90,7 +90,7 @@ void Sudoku::solve(){
 	
 
 		for (i=0 ; i <MapSize ; i++) {Ans[i]=0; Bns[i]=0;}				// init my Ans
-		for (i=0 ; i <MapSize ; i++) {Qus[i] = map[i];}		// Qus = map
+//		for (i=0 ; i <MapSize ; i++) {Qus[i] = map[i];}		// Qus = map
 		if ( backtrack(0) ){
 			cout <<2 ;
 			return;
