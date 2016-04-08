@@ -9,7 +9,7 @@ Sudoku::Sudoku(){				// Initialize map??
 		map[i]=0;
 }  
 
-/*
+
 void Sudoku::giveQuestion(){
 	cout << "0" <<endl<< "6"<<endl<< "9"<<endl<< "8"<<endl<< "7"<<endl<< "0"<<endl<< "0"<<endl<< "0"<<endl<< "0"<<endl <<
 		    "4" <<endl<<"3" <<endl<<"7"<<endl<< "0" <<endl<<"0"<< endl<<"2"<<endl<<"0" <<endl<<"0"<<endl<< "1"<<endl<<
@@ -34,7 +34,7 @@ void Sudoku::transform(){
 	   
 	}
 }
-*/
+
 void Sudoku::readIn(){
 	int i;
 	i=0;
@@ -46,10 +46,8 @@ void Sudoku::readIn(){
 void Sudoku::changeNum(int a ,int b){
 	int x ,y ,i;
 	for (i=0 ; i<MapSize ; i++  ){ 
-		if( map[i] == a) map[i] = x;
-		else if(map[i]==b) map[i] = y;}
-		x = b;
-		y = a;
+		if( map[i] == a) map[i] = b;
+		else if(map[i]==b) map[i] = a;}
 }
 
 void Sudoku:: changeRow(int a,int b){
@@ -105,7 +103,7 @@ void Sudoku::flip(int a){
 			map[ 9*(8-i)+j ] =k;}
 	}
 }
-/*
+
 void Sudoku::testFun(){ 	// for main to print
 //	for( int i=0;i<MapSize ; i++ ){
 //		cout << Bns[i] <<" ";
@@ -121,4 +119,4 @@ void Sudoku::testFun(){ 	// for main to print
 		cout << map[i] <<" ";
 		if( i%9==8) cout << endl;
 	}
-}  */
+}  
