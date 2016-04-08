@@ -34,7 +34,40 @@ bool Sudoku::checkRead(){
 	
 	
 	if( count < 17 ){
-		cout << "0"<<endl;
+		count2=0;
+			for( i=0 ; i<MapSize; i++ ){
+			if( map[i]!=0 ){
+			row = i/9 ; col = i%9 ;
+			for ( t=0 ; t<9 ; t++ ){					//check row
+				if (map[i] == map[9*row +t]){
+					count2++ ;
+				}
+			}
+			if ( count2 >1){
+				cout <<"0";
+				return false;
+			}
+			for ( t=0 ; t<9 ;t++){						//check col
+				if( map[i]== map[9*t + col ] ) 
+					count2++  ;
+			}
+			if( count2 >2){
+				cout <<"0";
+				return false;
+			}
+			bloRow = row -  (row % 3);					//check block
+			bloCol = col -  (col % 3);	
+			for( t=bloRow ; t < bloRow + 3 ; t++ ){
+				for ( x=bloCol ; x < bloCol+3  ; x++ ){
+					if( map[ 9*t + x ] == map[i])
+						 count2++    ;
+				 }
+			}
+			if ( count2>3){
+				cout<<"0";
+				return false;
+			}}}
+		cout << "2"<<endl;
 		return false;
 	}
 	else if(count ==81){
@@ -82,6 +115,7 @@ bool Sudoku::checkRead(){
 	}
 	else return true;
 }
+
 
 
 void Sudoku::solve(){
