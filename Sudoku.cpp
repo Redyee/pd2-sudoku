@@ -1,7 +1,8 @@
 #include<iostream>
-#include<vector>
 #include"Sudoku.h"
-
+#include<vector>
+#include<cstdlib>
+#include<algorithm>
 using namespace std;
 int buff[81];
 Sudoku::Sudoku(){				// Initialize map??
