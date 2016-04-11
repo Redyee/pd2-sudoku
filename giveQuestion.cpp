@@ -1,5 +1,9 @@
 #include<iostream>
 #include"Sudoku.h"
+#include<vector>
+#include<cstdlib>
+#include<algorithm>
+using namespace std;
 void Sudoku::giveQuestion(){
 	        cout << "0" <<endl<< "6"<<endl<< "9"<<endl<< "8"<<endl<< "7"<<endl<< "0"<<endl<< "0"<<endl<< "0"<<endl<< "0"<<endl <<
 				                    "4" <<endl<<"3" <<endl<<"7"<<endl<< "0" <<endl<<"0"<< endl<<"2"<<endl<<"0" <<endl<<"0"<<endl<< "1"<<endl<<
